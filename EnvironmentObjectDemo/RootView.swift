@@ -14,9 +14,6 @@ struct RootView: View {
   var body: some View {
     VStack {
       Text("Counter: \(counter.value)").padding()
-      Button("Increment") {
-        counter.increment()
-      }.padding()
       NavigationLink(
         "Go to FirstView",
         destination: FirstView()
