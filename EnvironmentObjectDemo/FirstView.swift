@@ -12,6 +12,7 @@ struct FirstView: View {
   // MARK: Internal
 
   @EnvironmentObject var counter: Counter
+  @ObservedObject var viewModel: FirstViewModel
 
   var body: some View {
     CounterView(counter: counter)
@@ -22,6 +23,6 @@ struct FirstView: View {
 
 struct FirstView_Previews: PreviewProvider {
   static var previews: some View {
-    FirstView()
+    FirstView(viewModel: FirstViewModel())
   }
 }

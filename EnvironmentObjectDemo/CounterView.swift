@@ -22,7 +22,7 @@ struct CounterView: View {
   var body: some View {
     VStack {
       Text("Counter: \(counter.value)").padding()
-      Button("Do stuff and Increment") {
+      Button("Do stuff and Increment by 100") {
         viewModel.process()
       }
     }

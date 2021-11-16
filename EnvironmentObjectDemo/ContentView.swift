@@ -8,10 +8,13 @@ import SwiftUI
 // MARK: - ContentView
 
 struct ContentView: View {
+
+  @StateObject var counter = Counter()
+
   var body: some View {
     NavigationView {
       RootView()
-        .environmentObject(Counter())
+        .environmentObject(counter)
     }
   }
 }

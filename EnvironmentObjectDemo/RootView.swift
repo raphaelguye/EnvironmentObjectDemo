@@ -10,6 +10,7 @@ import SwiftUI
 struct RootView: View {
 
   @EnvironmentObject var counter: Counter
+  @StateObject var firstViewModel = FirstViewModel()
 
   var body: some View {
     VStack {
@@ -19,7 +20,7 @@ struct RootView: View {
       }.padding()
       NavigationLink(
         "Go to FirstView",
-        destination: FirstView()
+        destination: FirstView(viewModel: firstViewModel)
           .environmentObject(counter)).padding()
     }
   }
