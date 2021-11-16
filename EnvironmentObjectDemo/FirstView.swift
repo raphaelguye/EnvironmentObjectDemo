@@ -12,15 +12,9 @@ struct FirstView: View {
   // MARK: Internal
 
   @EnvironmentObject var counter: Counter
-  @ObservedObject var viewModel = FirstViewModel()
 
   var body: some View {
-    VStack {
-      Text("Counter: \(counter.value)").padding()
-      Button("Do stuff and Increment") {
-        viewModel.process()
-      }
-    }
+    CounterView(counter: counter)
   }
 }
 
